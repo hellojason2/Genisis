@@ -32,73 +32,50 @@
     </div>
 
     <!-- Navigation (Aura Design) -->
-    <header
-        class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black/0 backdrop-blur-xl transition-all duration-300">
-        <div class="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-3 group">
+    <!-- Navigation -->
+    <div class="fixed z-50 flex w-full top-6 px-6 justify-center">
+        <nav class="flex w-full max-w-[1400px] mx-auto items-center justify-between">
+            <div class="flex items-center gap-3">
                 <div
-                    class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-300 flex items-center justify-center shadow-[0_0_15px_rgba(245,184,0,0.2)] group-hover:shadow-[0_0_25px_rgba(245,184,0,0.4)] transition-all duration-300">
-                    <iconify-icon icon="ph:chart-polar-fill" class="text-black text-lg"></iconify-icon>
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-300 flex items-center justify-center shadow-[0_0_15px_rgba(245,184,0,0.3)]">
+                    <iconify-icon icon="ph:chart-polar-fill" class="text-black text-xl"></iconify-icon>
                 </div>
-                <span
-                    class="text-sm font-bold tracking-tight text-white uppercase brand-font group-hover:text-amber-500 transition-colors">
+                <span class="text-sm font-bold tracking-tight text-white uppercase brand-font">
                     Genesis
                 </span>
-            </a>
+            </div>
 
-            <!-- Navigation Links (Centered, Clean Text) -->
-            <nav class="hidden md:flex items-center gap-8">
+            <div
+                class="hidden md:flex items-center gap-1 backdrop-blur-xl bg-white/[0.03] border border-white/[0.08] rounded-full p-1.5 pr-2 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
                 <a href="index.html"
-                    class="text-[11px] font-semibold text-neutral-400 hover:text-white transition-colors tracking-widest uppercase">
+                    class="px-5 py-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 text-[11px] font-medium transition-all tracking-wide uppercase">
                     Platform
                 </a>
                 <a href="#"
-                    class="text-[11px] font-semibold text-neutral-400 hover:text-white transition-colors tracking-widest uppercase">
+                    class="px-5 py-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 text-[11px] font-medium transition-all tracking-wide uppercase">
                     Academy
                 </a>
                 <a href="tutorial.html"
-                    class="text-[11px] font-bold text-white transition-colors tracking-widest uppercase relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-amber-500 after:rounded-full">
+                    class="px-5 py-2 rounded-full bg-amber-500 text-black text-[11px] font-bold tracking-wide hover:shadow-[0_0_15px_rgba(245,184,0,0.4)] transition-all uppercase">
                     Tutorial
                 </a>
                 <a href="#"
-                    class="text-[11px] font-semibold text-neutral-400 hover:text-white transition-colors tracking-widest uppercase">
+                    class="px-5 py-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 text-[11px] font-medium transition-all tracking-wide uppercase">
                     GEE Token
                 </a>
                 <a href="#"
-                    class="text-[11px] font-semibold text-neutral-400 hover:text-white transition-colors tracking-widest uppercase">
+                    class="px-5 py-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 text-[11px] font-medium transition-all tracking-wide uppercase">
                     Contact
                 </a>
-            </nav>
-
-            <!-- Right Actions -->
-            <div class="flex items-center gap-5">
-                <!-- Theme Toggle / Status (Visual Only for now) -->
-                <div class="hidden md:flex h-8 px-1 items-center bg-white/5 rounded-full border border-white/5">
-                    <div class="px-2.5 py-1 rounded-full bg-white/10 text-amber-500">
-                        <iconify-icon icon="ph:sun-fill" class="text-xs"></iconify-icon>
-                    </div>
-                    <div class="px-2.5 py-1 text-neutral-500 hover:text-white transition-colors cursor-pointer">
-                        <iconify-icon icon="ph:moon-fill" class="text-xs"></iconify-icon>
-                    </div>
-                </div>
-
-                <!-- Launch / Sign In Button -->
-                <a href="#"
-                    class="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all group">
-                    <span class="text-[10px] font-bold text-white tracking-widest uppercase">Launch App</span>
-                    <iconify-icon icon="ph:arrow-right-bold"
-                        class="text-white text-xs group-hover:translate-x-0.5 transition-transform"></iconify-icon>
-                </a>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn"
-                    class="md:hidden flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/5 transition-colors text-white">
-                    <iconify-icon icon="ph:list-bold" class="text-xl"></iconify-icon>
-                </button>
             </div>
-        </div>
-    </header>
+
+            <button id="mobile-menu-btn"
+                class="flex items-center gap-2 text-[11px] font-medium text-white uppercase tracking-wider hover:opacity-70 transition-opacity">
+                Menu
+                <span class="text-amber-500">+</span>
+            </button>
+        </nav>
+    </div>
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay"
@@ -109,11 +86,11 @@
                 <iconify-icon icon="ph:x-bold" class="text-3xl"></iconify-icon>
             </button>
             <a href="index.html"
-                class="text-2xl font-bold text-amber-500 transition-colors uppercase tracking-widest brand-font">Platform</a>
+                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">Platform</a>
             <a href="#"
                 class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">Academy</a>
             <a href="tutorial.html"
-                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">Tutorial</a>
+                class="text-2xl font-bold text-amber-500 transition-colors uppercase tracking-widest brand-font">Tutorial</a>
             <a href="#"
                 class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">GEE
                 Token</a>

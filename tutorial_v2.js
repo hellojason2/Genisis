@@ -297,8 +297,8 @@ function updateStep(stepIndex, animate = true) {
            <div class="iphone-frame-wrapper transform transition-all duration-500 hover:scale-105">
                 <div class="relative bg-black rounded-[2.5rem] p-3 shadow-2xl border border-white/10 ring-1 ring-black">
                      <!-- Screen -->
-                     <div class="relative rounded-[2rem] overflow-hidden aspect-[9/19.5] bg-[#050505]">
-                         <img src="${step.image}" class="w-full h-full object-cover" alt="${step.title}">
+                     <div class="relative rounded-[2rem] overflow-hidden aspect-[9/19.5] bg-black flex items-center justify-center">
+                         <img src="${step.image}" class="w-full h-full object-contain" alt="${step.title}">
                          <!-- Home Indicator -->
                          <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-white/20 rounded-full backdrop-blur-md"></div>
                      </div>

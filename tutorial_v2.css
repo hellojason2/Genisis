@@ -90,7 +90,7 @@
    ───────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
     .iphone-frame-wrapper {
-        max-width: 180px;
+        max-width: 320px;
         /* Significantly smaller for mobile */
     }
 }
