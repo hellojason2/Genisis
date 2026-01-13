@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Genesis Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body
+    class="relative min-h-screen selection:bg-amber-500 selection:text-black pt-32 bg-black text-neutral-200 flex flex-col justify-between">
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 pointer-events-none z-0 technical-grid opacity-20"></div>
+    <div class="genesis-aura-bg"></div>
+
+    <!-- Vertical Structure Lines -->
+    <div class="fixed inset-0 pointer-events-none z-0 max-w-[1400px] mx-auto border-x border-white/[0.04]">
+        <div class="absolute left-1/4 h-full w-px bg-white/[0.02]"></div>
+        <div class="absolute left-2/4 h-full w-px bg-white/[0.02]"></div>
+        <div class="absolute left-3/4 h-full w-px bg-white/[0.02]"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="fixed z-50 flex w-full top-6 px-6 justify-center">
+        <nav class="flex w-full max-w-[1400px] mx-auto items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-300 flex items-center justify-center shadow-[0_0_15px_rgba(245,184,0,0.3)]">
+                    <iconify-icon icon="ph:chart-polar-fill" class="text-black text-xl"></iconify-icon>
+                </div>
+                <span class="text-sm font-bold tracking-tight text-white uppercase brand-font">
+                    Genesis
+                </span>
+            </div>
+
+            <div
+                class="hidden md:flex items-center gap-1 backdrop-blur-xl bg-white/[0.03] border border-white/[0.08] rounded-full p-1.5 pr-2 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                <a href="index.html"
+                    class="px-5 py-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 text-[11px] font-medium transition-all tracking-wide uppercase">
+                    Platform
+                </a>
+                <a href="#"
+                    class="px-5 py-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 text-[11px] font-medium transition-all tracking-wide uppercase">
+                    Academy
+                </a>
+                <a href="tutorial.html"
+                    class="px-5 py-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 text-[11px] font-medium transition-all tracking-wide uppercase">
+                    Tutorial
+                </a>
+                <a href="#"
+                    class="px-5 py-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 text-[11px] font-medium transition-all tracking-wide uppercase">
+                    GEE Token
+                </a>
+                <a href="#"
+                    class="px-5 py-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 text-[11px] font-medium transition-all tracking-wide uppercase">
+                    Contact
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn"
+                class="flex items-center gap-2 text-[11px] font-medium text-white uppercase tracking-wider hover:opacity-70 transition-opacity">
+                Menu
+                <span class="text-amber-500">+</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay"
+        class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl hidden opacity-0 transition-opacity duration-300">
+        <div class="flex flex-col h-full justify-center items-center gap-8">
+            <button id="mobile-menu-close"
+                class="absolute top-8 right-8 text-white hover:text-amber-500 transition-colors">
+                <iconify-icon icon="ph:x-bold" class="text-3xl"></iconify-icon>
+            </button>
+            <a href="index.html"
+                class="text-2xl font-bold text-amber-500 transition-colors uppercase tracking-widest brand-font">Platform</a>
+            <a href="#"
+                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">Academy</a>
+            <a href="tutorial.html"
+                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">Tutorial</a>
+            <a href="#"
+                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">GEE
+                Token</a>
+            <a href="#"
+                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="relative z-10 w-full max-w-[480px] px-6 mx-auto mb-20 flex-grow flex flex-col justify-center">
+
+        <!-- Logo Area -->
+        <div class="text-center mb-8">
+            <div
+                class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-300 shadow-[0_0_20px_rgba(245,184,0,0.3)] mb-4">
+                <iconify-icon icon="ph:chart-polar-fill" class="text-black text-2xl"></iconify-icon>
+            </div>
+            <h2 class="text-2xl font-bold font-montserrat tracking-tight text-white">
+                REGISTER TO <span class="text-amber-500">Genesis</span>
+            </h2>
+            <div class="h-px w-24 bg-gradient-to-r from-transparent via-amber-500/50 to-transparent mx-auto mt-4"></div>
+        </div>
+
+        <!-- Glass Form Card -->
+        <div
+            class="glass-form-card p-8 rounded-3xl backdrop-blur-xl border border-white/10 relative overflow-hidden group">
+            <!-- Shine Effect -->
+            <div
+                class="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+            </div>
+
+            <form class="space-y-5 relative z-10">
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label class="block text-xs font-medium text-neutral-400 uppercase tracking-wider mb-2">Email
+                        Address</label>
+                    <div class="relative">
+                        <input type="email" placeholder="name@example.com"
+                            class="genesis-input w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-500/50 focus:bg-white/10 transition-all">
+                        <iconify-icon icon="ph:envelope-simple-bold"
+                            class="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500 text-lg"></iconify-icon>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label class="block text-xs font-medium text-neutral-400 uppercase tracking-wider mb-2">Login
+                        Password</label>
+                    <div class="relative">
+                        <input type="password" placeholder="••••••••"
+                            class="genesis-input w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-500/50 focus:bg-white/10 transition-all">
+                        <iconify-icon icon="ph:lock-key-bold"
+                            class="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500 text-lg"></iconify-icon>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label class="block text-xs font-medium text-neutral-400 uppercase tracking-wider mb-2">Confirm
+                        Password</label>
+                    <div class="relative">
+                        <input type="password" placeholder="••••••••"
+                            class="genesis-input w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-500/50 focus:bg-white/10 transition-all">
+                        <iconify-icon icon="ph:check-circle-bold"
+                            class="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500 text-lg"></iconify-icon>
+                    </div>
+                </div>
+
+                <!-- Email Verification -->
+                <div class="form-group">
+                    <label class="block text-xs font-medium text-neutral-400 uppercase tracking-wider mb-2">Email
+                        Verification Code</label>
+                    <div class="flex gap-3">
+                        <div class="relative flex-1">
+                            <input type="text" placeholder="123456"
+                                class="genesis-input w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-500/50 focus:bg-white/10 transition-all">
+                            <iconify-icon icon="ph:shield-check-bold"
+                                class="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500 text-lg"></iconify-icon>
+                        </div>
+                        <button type="button"
+                            class="px-4 py-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 font-bold text-xs uppercase hover:bg-amber-500 hover:text-black transition-all">
+                            Send
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Invitation Code -->
+                <div class="form-group">
+                    <label class="block text-xs font-medium text-neutral-400 uppercase tracking-wider mb-2">Invitation
+                        Code</label>
+                    <div class="relative">
+                        <input type="text" value="994469"
+                            class="genesis-input w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-500/50 focus:bg-white/10 transition-all">
+                        <iconify-icon icon="ph:qr-code-bold"
+                            class="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500 text-lg"></iconify-icon>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full py-4 mt-4 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 text-black font-bold text-sm uppercase tracking-widest hover:shadow-[0_0_20px_rgba(245,184,0,0.4)] transform hover:-translate-y-0.5 transition-all duration-300">
+                    Register
+                </button>
+            </form>
+        </div>
+
+        <!-- Registered Link -->
+        <div class="text-center mt-6">
+            <a href="#"
+                class="text-sm text-neutral-500 hover:text-amber-500 transition-colors flex items-center justify-center gap-2 group">
+                Registered, click <span
+                    class="text-white group-hover:underline decoration-amber-500 underline-offset-4">Download</span>
+                <iconify-icon icon="ph:arrow-right-bold"
+                    class="opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all text-amber-500"></iconify-icon>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-black py-12 relative z-10 w-full mt-auto">
+        <div class="max-w-[1400px] mx-auto px-6 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-6">
+                <div
+                    class="w-6 h-6 rounded bg-gradient-to-br from-amber-500 to-yellow-300 flex items-center justify-center">
+                    <iconify-icon icon="ph:chart-polar-fill" class="text-black text-sm"></iconify-icon>
+                </div>
+                <span class="text-sm font-bold tracking-tight text-white uppercase brand-font">
+                    Genesis
+                </span>
+            </div>
+            <p class="text-neutral-500 text-xs text-center">
+                © 2026 Genesis Ecosystem. The Global Intelligence of Investment.<br>
+                Decentralized • Transparent • Profitable
+            </p>
+        </div>
+    </footer>
+
+    <script src="mobile-menu.js"></script>
+</body>
+
+</html>

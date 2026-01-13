@@ -1,0 +1,94 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   GENESIS SIGNUP PAGE STYLES
+   Dark mode, Gold Accents, Glassmorphism
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Fonts */
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Genesis Aura Background - GOLD */
+.genesis-aura-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120vw;
+    height: 120vh;
+    background:
+        radial-gradient(circle at 15% 50%, rgba(245, 184, 0, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(245, 184, 0, 0.08) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Technical Grid Overlay */
+.technical-grid {
+    background-size: 50px 50px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+/* Glass Card Styling */
+.glass-form-card {
+    background: rgba(10, 10, 10, 0.6);
+    box-shadow:
+        0 20px 40px -10px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Input Fields Animation */
+.genesis-input {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.genesis-input:focus {
+    box-shadow: 0 0 0 4px rgba(245, 184, 0, 0.1);
+}
+
+/* 3D Float Animation for Card */
+.glass-form-card {
+    animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Button Shine Effect */
+button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+}
+
+button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+button[type="submit"]:hover::after {
+    left: 100%;
+    transition: 0.5s;
+}

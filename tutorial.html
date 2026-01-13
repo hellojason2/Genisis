@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial - Genesis Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- GSAP with Flip and ScrollTrigger plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tutorial_v2.css?v=2">
+</head>
+
+<body class="relative min-h-screen selection:bg-amber-500 selection:text-black pt-32 bg-black text-neutral-200">
+    <!-- Technical Grid Overlay -->
+    <div class="fixed inset-0 pointer-events-none z-0 technical-grid opacity-30"></div>
+
+    <!-- Vertical Structure Lines -->
+    <div class="fixed inset-0 pointer-events-none z-0 max-w-[1400px] mx-auto border-x border-white/[0.04]">
+        <div class="absolute left-1/4 h-full w-px bg-white/[0.02]"></div>
+        <div class="absolute left-2/4 h-full w-px bg-white/[0.02]"></div>
+        <div class="absolute left-3/4 h-full w-px bg-white/[0.02]"></div>
+    </div>
+
+    <!-- Navigation (Aura Design) -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black/0 backdrop-blur-xl transition-all duration-300">
+        <div class="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-300 flex items-center justify-center shadow-[0_0_15px_rgba(245,184,0,0.2)] group-hover:shadow-[0_0_25px_rgba(245,184,0,0.4)] transition-all duration-300">
+                    <iconify-icon icon="ph:chart-polar-fill" class="text-black text-lg"></iconify-icon>
+                </div>
+                <span
+                    class="text-sm font-bold tracking-tight text-white uppercase brand-font group-hover:text-amber-500 transition-colors">
+                    Genesis
+                </span>
+            </a>
+
+            <!-- Navigation Links (Centered, Clean Text) -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html"
+                    class="text-[11px] font-semibold text-neutral-400 hover:text-white transition-colors tracking-widest uppercase">
+                    Platform
+                </a>
+                <a href="#"
+                    class="text-[11px] font-semibold text-neutral-400 hover:text-white transition-colors tracking-widest uppercase">
+                    Academy
+                </a>
+                <a href="tutorial.html"
+                    class="text-[11px] font-bold text-white transition-colors tracking-widest uppercase relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-amber-500 after:rounded-full">
+                    Tutorial
+                </a>
+                <a href="#"
+                    class="text-[11px] font-semibold text-neutral-400 hover:text-white transition-colors tracking-widest uppercase">
+                    GEE Token
+                </a>
+                <a href="#"
+                    class="text-[11px] font-semibold text-neutral-400 hover:text-white transition-colors tracking-widest uppercase">
+                    Contact
+                </a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-5">
+                <!-- Theme Toggle / Status (Visual Only for now) -->
+                <div class="hidden md:flex h-8 px-1 items-center bg-white/5 rounded-full border border-white/5">
+                    <div class="px-2.5 py-1 rounded-full bg-white/10 text-amber-500">
+                        <iconify-icon icon="ph:sun-fill" class="text-xs"></iconify-icon>
+                    </div>
+                    <div class="px-2.5 py-1 text-neutral-500 hover:text-white transition-colors cursor-pointer">
+                        <iconify-icon icon="ph:moon-fill" class="text-xs"></iconify-icon>
+                    </div>
+                </div>
+
+                <!-- Launch / Sign In Button -->
+                <a href="#"
+                    class="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all group">
+                    <span class="text-[10px] font-bold text-white tracking-widest uppercase">Launch App</span>
+                    <iconify-icon icon="ph:arrow-right-bold"
+                        class="text-white text-xs group-hover:translate-x-0.5 transition-transform"></iconify-icon>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/5 transition-colors text-white">
+                    <iconify-icon icon="ph:list-bold" class="text-xl"></iconify-icon>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay"
+        class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl hidden opacity-0 transition-opacity duration-300">
+        <div class="flex flex-col h-full justify-center items-center gap-8">
+            <button id="mobile-menu-close"
+                class="absolute top-8 right-8 text-white hover:text-amber-500 transition-colors">
+                <iconify-icon icon="ph:x-bold" class="text-3xl"></iconify-icon>
+            </button>
+            <a href="index.html"
+                class="text-2xl font-bold text-amber-500 transition-colors uppercase tracking-widest brand-font">Platform</a>
+            <a href="#"
+                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">Academy</a>
+            <a href="tutorial.html"
+                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">Tutorial</a>
+            <a href="#"
+                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">GEE
+                Token</a>
+            <a href="#"
+                class="text-2xl font-bold text-white hover:text-amber-500 transition-colors uppercase tracking-widest brand-font">Contact</a>
+        </div>
+    </div>
+
+    <!-- APP ROOT -->
+    <div id="app-root" class="min-h-screen relative z-10 w-full mb-20">
+        <!-- Content injected by tutorial_v2.js -->
+    </div>
+
+    <footer class="border-t border-white/5 bg-black py-12 relative z-10">
+        <div class="max-w-[1400px] mx-auto px-6 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-6">
+                <div
+                    class="w-6 h-6 rounded bg-gradient-to-br from-amber-500 to-yellow-300 flex items-center justify-center">
+                    <iconify-icon icon="ph:chart-polar-fill" class="text-black text-sm"></iconify-icon>
+                </div>
+                <span class="text-sm font-bold tracking-tight text-white uppercase brand-font">
+                    Genesis
+                </span>
+            </div>
+            <p class="text-neutral-500 text-xs text-center">
+                © 2026 Genesis Ecosystem. The Global Intelligence of Investment.<br>
+                Decentralized • Transparent • Profitable
+            </p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="tutorial_v2.js"></script>
+</body>
+
+</html>
